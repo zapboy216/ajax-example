@@ -1,0 +1,896 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="description" content="...">
+
+		<meta name="viewport" content="width=device-width, maximum-scale=5, initial-scale=1">
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- up to 10% speed up for external res -->
+		<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+		<link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+		<link rel="preconnect" href="https://fonts.googleapis.com/">
+		<link rel="preconnect" href="https://fonts.gstatic.com/">
+		<!-- preloading icon font is helping to speed up a little bit -->
+		<link rel="preload" href="assets/fonts/flaticon/Flaticon.woff2" as="font" type="font/woff2" crossorigin>
+
+		<link rel="stylesheet" href="assets/css/core.min.css">
+		<link rel="stylesheet" href="assets/css/vendor_bundle.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+		<!-- favicon -->
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="apple-touch-icon" href="demo.files/logo/icon_512x512.png">
+
+	</head>
+
+	<!--
+
+		Available Body Classes
+			.layout-boxed 					- boxed layout (ignored if any .header-* class is present)
+
+			.header-scroll-reveal  			- header : hide on scroll down and reveal on scroll up
+			.header-sticky  				- header : always visible on top
+			.header-over  					- header : over slider|parallax|image (next section must contain a large image, else will be indistinguishable)
+
+				Possible header combinations:
+					.header-over + .header-scroll-reveal
+					.header-over + .header-sticky
+						* NOTE: if .header-sticky + .header-scroll-reveal are both used, .header-scroll-reveal is ignored
+
+
+			.bg-cover .bg-fixed 			- both classes used with .layout-boxed to set a background image via style="background-image:url(...)"
+	-->
+	<body class="header-scroll-reveal">
+
+		<div id="wrapper">
+
+
+			<!-- Header -->
+			<header id="header">
+
+
+				<!-- Navbar -->
+				<div class="container position-relative">
+
+					<nav class="navbar navbar-expand-lg navbar-light justify-content-lg-between justify-content-md-inherit">
+
+						<div class="align-items-start">
+
+							<!-- mobile menu button : show -->
+							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainNav" aria-controls="navbarMainNav" aria-expanded="false" aria-label="Toggle navigation">
+								<svg width="25" viewBox="0 0 20 20">
+									<path d="M 19.9876 1.998 L -0.0108 1.998 L -0.0108 -0.0019 L 19.9876 -0.0019 L 19.9876 1.998 Z"></path>
+									<path d="M 19.9876 7.9979 L -0.0108 7.9979 L -0.0108 5.9979 L 19.9876 5.9979 L 19.9876 7.9979 Z"></path>
+									<path d="M 19.9876 13.9977 L -0.0108 13.9977 L -0.0108 11.9978 L 19.9876 11.9978 L 19.9876 13.9977 Z"></path>
+									<path d="M 19.9876 19.9976 L -0.0108 19.9976 L -0.0108 17.9976 L 19.9876 17.9976 L 19.9876 19.9976 Z"></path>
+								</svg>
+							</button>
+
+<!-- navbar : brand (logo) -->
+							<a class="navbar-brand js-ajax" href="index.html">
+								<img src="assets/images/logo/logo_dark.png" width="100" alt="..." data-aos="fade-up" data-aos-delay="100">
+							</a>
+
+						</div>
+
+
+
+
+						<!-- Menu -->
+						<div class="collapse navbar-collapse navbar-animate-fadein" id="navbarMainNav">
+
+
+							<!-- navbar : mobile menu -->
+							<div class="navbar-xs d-none"><!-- .sticky-top -->
+
+								<!-- mobile menu button : close -->
+								<button class="navbar-toggler pt-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainNav" aria-controls="navbarMainNav" aria-expanded="false" aria-label="Toggle navigation">
+									<svg width="20" viewBox="0 0 20 20">
+										<path d="M 20.7895 0.977 L 19.3752 -0.4364 L 10.081 8.8522 L 0.7869 -0.4364 L -0.6274 0.977 L 8.6668 10.2656 L -0.6274 19.5542 L 0.7869 20.9676 L 10.081 11.679 L 19.3752 20.9676 L 20.7895 19.5542 L 11.4953 10.2656 L 20.7895 0.977 Z"></path>
+									</svg>
+								</button>
+
+								<!-- 
+									Mobile Menu Logo 
+									Logo : height: 70px max
+								-->
+								<a class="navbar-brand js-ajax" href="index.html">
+									<img src="assets/images/logo/logo_dark.png" width="60" alt="...">
+								</a>
+
+							</div>
+							<!-- /navbar : mobile menu -->
+
+
+
+							<!-- navbar : navigation -->
+							<ul class="navbar-nav">
+
+								<!-- Features -->
+							
+
+
+								<li class="nav-item dropdown">
+
+									<a href="#" id="mainNavSolutions" class="nav-link dropdown-toggle" 
+										data-bs-toggle="dropdown" 
+										aria-haspopup="true" 
+										aria-expanded="false">
+										Solutions
+									</a>
+
+									<!--
+										
+										.dropdown-menu-invert = open invert
+
+									-->
+									<div aria-labelledby="mainNavSolutions" class="shadow-none dropdown-menu dropdown-menu-clean dropdown-menu-hover w-600 bg-dark">										
+										
+										<div class="row g-0 col-border">
+											
+											<div class="col-12 col-lg-4 border-0-xs">
+
+												<!-- Documentation : no container, direct links! -->
+												<a href="page-1.html" class="js-ajax dropdown-item transition-hover-top clearfix text-white py-4 text-center">
+													<span class="fi fi-brain fs-1 mb-3"><!-- icon --></span>
+													<span class="d-block small fw-medium">FULLY MODULAR</span>
+													<span class="d-block small text-wrap mt-1">Anything is possible!</span>
+												</a>
+
+											</div>
+
+											<div class="col-12 col-lg-4 border-0-xs">
+
+												<!-- Documentation : no container, direct links! -->
+												<a href="page-2.html" class="js-ajax dropdown-item transition-hover-top clearfix text-white py-4 text-center">
+													<span class="fi fi-heart-empty fs-1 mb-3"><!-- icon --></span>
+													<span class="d-block small fw-medium">ADMIN INCLUDED</span>
+													<span class="d-block small text-wrap mt-1">Same core, same elements!</span>
+												</a>
+
+											</div>
+
+
+											<div class="col-12 col-lg-4 border-0-xs">
+
+												<!-- Documentation : no container, direct links! -->
+												<a href="page-3.html" class="js-ajax dropdown-item transition-hover-top clearfix text-white py-4 text-center">
+													<span class="fi fi-layers fs-1 mb-3"><!-- icon --></span>
+													<span class="d-block small fw-medium">NO SEPARATION</span>
+													<span class="d-block small text-wrap mt-1">Everything common!</span>
+												</a>
+
+											</div>
+
+										</div>
+
+									</div>
+
+
+								</li>
+
+
+								<!--Our Work -->
+								<li class="nav-item dropdown">
+
+									<a href="work.html" class="nav-link js-ajax">
+										Our Work
+									</a>
+
+								</li>
+
+
+
+								<!-- How it works -->
+								<li class="nav-item">
+
+									<a class="nav-link js-ajax" href="how.html">
+										How it works
+									</a>
+
+								</li>
+
+
+								<!-- Contact -->
+								<li class="nav-item">
+
+									<a class="nav-link js-ajax" href="contact.html">
+										Contact Us
+									</a>
+
+								</li>
+
+
+								<!-- social icons : mobile only -->
+								<li class="nav-item d-block d-sm-none text-center mb-4">
+
+									<h3 class="h6 text-muted">Follow Us</h3>
+
+										<!-- facebook -->
+									<a href="#" class="btn btn-sm btn-facebook transition-hover-top mb-2 rounded-circle text-white" rel="noopener">
+										<i class="fi fi-social-facebook"></i> 
+									</a>
+
+									<!-- twitter -->
+									<a href="#" class="btn btn-sm btn-twitter transition-hover-top mb-2 rounded-circle text-white" rel="noopener">
+										<i class="fi fi-social-twitter"></i> 
+									</a>
+
+									<!-- linkedin -->
+									<a href="#" class="btn btn-sm btn-linkedin transition-hover-top mb-2 rounded-circle text-white" rel="noopener">
+										<i class="fi fi-social-linkedin"></i> 
+									</a>
+
+									<!-- youtube -->
+									<a href="#" class="btn btn-sm btn-youtube transition-hover-top mb-2 rounded-circle text-white" rel="noopener">
+										<i class="fi fi-social-youtube"></i> 
+									</a>
+
+								</li>
+
+
+							</ul>
+							<!-- /navbar : navigation -->
+
+
+						</div>
+
+
+
+
+
+						<!-- OPTIONS -->
+				
+						<!-- /OPTIONS -->
+
+
+
+					</nav>
+
+				</div>
+				<!-- /Navbar -->
+
+			</header>
+			<!-- /Header -->
+
+
+			<!-- #middle = ajax main container -->
+			<div id="middle">
+
+
+				<!-- INTRO -->
+				<div class="section bg-theme-color-light" data-aos="fade-up" data-aos-delay="100">
+
+					<!-- svg shape -->
+					<svg class="position-absolute top-0 start-0 end-0" viewBox="0 480.469 1000 39.062">
+						<polygon fill="#FFFFFF" points="0,519.531 0,480.469 1000,480.469 "></polygon>
+					</svg>
+					
+					<div class="container min-vh-50 pt-5"> 
+
+						<div class="row text-center-xs d-middle">
+							
+							<div class="col-12 col-md-6 order-2 order-md-1 pb-5" data-aos="fade-up" data-aos-delay="100">
+
+								<div class="mb-5">
+									
+									<h1 class="display-4 fw-bold mb-0">
+										<span class="text-primary">Dinan</span> Careers
+									</h1>
+									
+									<p class="h5 mb-4">
+										Join Dinan, a career 
+
+										<span class="typed" 
+											data-typed-string="for life|for you"
+											data-typed-speed-forward="80" 
+											data-typed-speed-back="40" 
+											data-typed-back-delay="700" 
+											data-typed-loop-times="infinite" 
+											data-typed-smart-backspace="true" 
+											data-typed-shuffle="false" 
+											data-typed-cursor="|"></span>
+
+									</p>
+
+									<p class="lead">
+										Dinan is looking for you! Dinan wants you as part of our team, part of our vision! Your value is more than a regular employee!
+									</p>
+
+								</div>
+
+							</div>
+
+							<div class="col-12 col-md-6 order-1 order-md-2 pb-5">
+
+								<!-- svg image -->
+								<!-- <img width="600" height="400" class="img-fluid" src="demo.files/svg/premium/build_product.svg" alt="..."> -->
+
+
+
+								<div class="swiper-container swiper-btn-group swiper-btn-group-end text-dark" data-swiper='{
+										"slidesPerView": 1,
+										"spaceBetween": 0,
+										"slidesPerGroup": 1,
+										"effect": "fade",
+										"loop": true,
+										"autoplay": { "delay" : 3500, "disableOnInteraction": false }
+									}'>
+
+									<div class="hide swiper-wrapper">
+
+										<div class="swiper-slide rounded-circle">
+											<img class="img-fluid rounded-circle" src="demo.files/placeholder600.png" alt="...">
+										</div>
+
+										<div class="swiper-slide rounded-circle">
+											<img class="img-fluid rounded-circle" src="demo.files/placeholder600G.png" alt="...">
+										</div>
+
+									</div>
+
+									<!-- Add Arrows -->
+								
+
+								</div>
+
+							</div>
+
+						</div>
+
+
+					</div>
+
+				</div>	
+				<!-- /INTRO -->
+
+
+
+
+				<!-- CALL TO ACTION -->
+				<div class="section py-5 border-bottom" data-aos="fade-up" data-aos-delay="100" >
+					<div class="container">
+						<div class="row text-center-xs">
+
+							<div class="col-12 col-md-8">
+								<h3 class="m-0 fw-light">
+									The team is looking for you!
+
+								</h3>
+								<p class="m-0">A very strong team, with a strong vision for the future!</p>
+							</div>
+							
+							<div class="col-12 mt-4 d-block d-md-none"><!-- mobile spacer --></div>
+
+							<div class="col-12 col-md-4 text-align-end">
+								<a href="contact.html" class="js-ajax btn btn-primary btn-soft d-block-xs">Contact Us Now</a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!-- /CALL TO ACTION -->
+
+
+
+
+				<div class="section">
+					<div class="container">
+
+						<h2 class="display-5 fw-bold text-center col-lg-7 mx-auto mb-7" data-aos="fade-up" data-aos-delay="100">
+						Dinan is looking for your talent!
+						</h2>
+
+						<!-- job -->
+						<h3 class="h5 border-bottom pb-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+							<span class="float-end fs-6 text-success">2 available</span>
+							<span class="text-primary">01.</span> PR &amp; Marketing
+						</h3>
+
+						<p class="lead" data-aos="fade-up" data-aos-delay="100">
+							ipsom lorem 
+						</p>
+
+
+						<div class="row col-border mt-5">
+							<div class="col-12 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+								<h5 class="fw-light mb-3">Your Awesome Skills</h5>
+
+								<ul class="list-unstyled list-icons mb-5">
+
+									<li class="clearfix mb-2">
+										<div class="badge bg-warning-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-round-lightning text-dark"></i>
+										</div> Computer Science &amp; Engineering
+									</li>
+
+									<li class="clearfix mb-2">
+										<div class="badge bg-warning-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-round-lightning text-dark"></i>
+										</div> 3+ years analytics experience
+									</li>
+
+									<li class="clearfix mb-2">
+										<div class="badge bg-warning-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-round-lightning text-dark"></i>
+										</div> 3+ years of Public Speaking experience
+									</li>
+
+									<li class="clearfix mb-2">
+										<div class="badge bg-warning-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-round-lightning text-dark"></i>
+										</div> Minimum of 4 live project roll outs.
+									</li>
+
+									<li class="clearfix mb-2">
+										<div class="badge bg-warning-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-round-lightning text-dark"></i>
+										</div> Good Communication Skills
+									</li>
+
+									<li class="clearfix mb-2">
+										<div class="badge bg-warning-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-round-lightning text-dark"></i>
+										</div> Team Player
+									</li>
+
+								</ul>
+
+							</div>
+
+
+							<div class="col-12 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+								<h5 class="fw-light mb-3">Benefits</h5>
+								
+								<ul class="list-unstyled list-icons mb-5">
+									<li class="clearfix mb-2">
+										<div class="badge bg-success-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-check"></i>
+										</div> Child and Elder care benefits
+									</li>
+									<li class="clearfix mb-2">
+										<div class="badge bg-success-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-check"></i>
+										</div> Family-friendly benefits
+									</li>
+									<li class="clearfix mb-2">
+										<div class="badge bg-success-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-check"></i>
+										</div> Professional development programs
+									</li>
+									<li class="clearfix mb-2">
+										<div class="badge bg-success-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-check"></i>
+										</div> Retirement investment plans
+									</li>
+									<li class="clearfix mb-2">
+										<div class="badge bg-success-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-check"></i>
+										</div> Vacation time
+									</li>
+									<li class="clearfix mb-2">
+										<div class="badge bg-success-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-check"></i>
+										</div> Lunch and Learns
+									</li>
+									<li class="clearfix mb-2">
+										<div class="badge bg-success-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-check"></i>
+										</div> Carpool/Bus/Train Incentive 
+									</li>
+
+								</ul>
+								<!-- /job -->
+
+							</div>
+						</div>
+
+						<a href="contact-1.html" class="btn btn-sm btn-primary btn-soft">
+							<small class="d-block">2 available</small>
+							Contact Us Now
+						</a>
+
+					</div>
+				</div>
+
+
+
+				<div class="section bg-theme-color-light">
+					<div class="container">
+
+						<!-- job -->
+						<h3 class="h5 border-bottom pb-3 mb-4">
+							<span class="float-end fs-6 text-success">1 available</span>
+							<span class="text-primary">02.</span> PHP Programmer
+						</h3>
+
+						<p class="lead">
+						</p>
+
+
+						<div class="row col-border mt-5">
+							<div class="col-12 col-lg-6">
+
+								<h5 class="fw-light mb-3">Your Awesome Skills</h5>
+
+								<ul class="list-unstyled list-icons mb-5">
+
+									<li class="clearfix mb-2">
+										<div class="badge bg-warning-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-round-lightning text-dark"></i>
+										</div> Computer Science &amp; Engineering
+									</li>
+
+									<li class="clearfix mb-2">
+										<div class="badge bg-warning-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-round-lightning text-dark"></i>
+										</div> 3+ years analytics experience
+									</li>
+
+									<li class="clearfix mb-2">
+										<div class="badge bg-warning-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-round-lightning text-dark"></i>
+										</div> 3+ years of Public Speaking experience
+									</li>
+
+									<li class="clearfix mb-2">
+										<div class="badge bg-warning-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-round-lightning text-dark"></i>
+										</div> Minimum of 4 live project roll outs.
+									</li>
+
+									<li class="clearfix mb-2">
+										<div class="badge bg-warning-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-round-lightning text-dark"></i>
+										</div> Good Communication Skills
+									</li>
+
+									<li class="clearfix mb-2">
+										<div class="badge bg-warning-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-round-lightning text-dark"></i>
+										</div> Team Player
+									</li>
+
+								</ul>
+
+							</div>
+
+
+							<div class="col-12 col-lg-6">
+
+								<h5 class="fw-light mb-3">Benefits</h5>
+								
+								<ul class="list-unstyled list-icons mb-5">
+									<li class="clearfix mb-2">
+										<div class="badge bg-success-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-check"></i>
+										</div> Child and Elder care benefits
+									</li>
+									<li class="clearfix mb-2">
+										<div class="badge bg-success-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-check"></i>
+										</div> Family-friendly benefits
+									</li>
+									<li class="clearfix mb-2">
+										<div class="badge bg-success-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-check"></i>
+										</div> Professional development programs
+									</li>
+									<li class="clearfix mb-2">
+										<div class="badge bg-success-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-check"></i>
+										</div> Retirement investment plans
+									</li>
+									<li class="clearfix mb-2">
+										<div class="badge bg-success-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-check"></i>
+										</div> Vacation time
+									</li>
+									<li class="clearfix mb-2">
+										<div class="badge bg-success-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-check"></i>
+										</div> Lunch and Learns
+									</li>
+									<li class="clearfix mb-2">
+										<div class="badge bg-success-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-check"></i>
+										</div> Carpool/Bus/Train Incentive 
+									</li>
+
+								</ul>
+								<!-- /job -->
+
+							</div>
+						</div>
+
+						<a href="contact-1.html" class="btn btn-sm btn-primary btn-soft">
+							<small class="d-block">1 available</small>
+							Contact Us Now
+						</a>
+
+					</div>
+				</div>
+
+
+
+				<div class="section">
+					<div class="container">
+
+						<!-- job -->
+						<h3 class="h5 border-bottom pb-3 mb-4">
+							<span class="float-end fs-6 text-danger">0 available</span>
+							<span class="text-primary">03.</span> Javasvript Developer
+						</h3>
+
+						<p class="lead">
+ipsom lorem						</p>
+
+
+						<div class="row col-border mt-5">
+							<div class="col-12 col-lg-6">
+
+								<h5 class="fw-light mb-3">Your Awesome Skills</h5>
+
+								<ul class="list-unstyled list-icons mb-5">
+
+									<li class="clearfix mb-2">
+										<div class="badge bg-warning-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-round-lightning text-dark"></i>
+										</div> Computer Science &amp; Engineering
+									</li>
+
+									<li class="clearfix mb-2">
+										<div class="badge bg-warning-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-round-lightning text-dark"></i>
+										</div> 3+ years analytics experience
+									</li>
+
+									<li class="clearfix mb-2">
+										<div class="badge bg-warning-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-round-lightning text-dark"></i>
+										</div> 3+ years of Public Speaking experience
+									</li>
+
+									<li class="clearfix mb-2">
+										<div class="badge bg-warning-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-round-lightning text-dark"></i>
+										</div> Minimum of 4 live project roll outs.
+									</li>
+
+									<li class="clearfix mb-2">
+										<div class="badge bg-warning-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-round-lightning text-dark"></i>
+										</div> Good Communication Skills
+									</li>
+
+									<li class="clearfix mb-2">
+										<div class="badge bg-warning-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-round-lightning text-dark"></i>
+										</div> Team Player
+									</li>
+
+								</ul>
+
+							</div>
+
+
+							<div class="col-12 col-lg-6">
+
+								<h5 class="fw-light mb-3">Benefits</h5>
+								
+								<ul class="list-unstyled list-icons mb-5">
+									<li class="clearfix mb-2">
+										<div class="badge bg-success-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-check"></i>
+										</div> Child and Elder care benefits
+									</li>
+									<li class="clearfix mb-2">
+										<div class="badge bg-success-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-check"></i>
+										</div> Family-friendly benefits
+									</li>
+									<li class="clearfix mb-2">
+										<div class="badge bg-success-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-check"></i>
+										</div> Professional development programs
+									</li>
+									<li class="clearfix mb-2">
+										<div class="badge bg-success-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-check"></i>
+										</div> Retirement investment plans
+									</li>
+									<li class="clearfix mb-2">
+										<div class="badge bg-success-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-check"></i>
+										</div> Vacation time
+									</li>
+									<li class="clearfix mb-2">
+										<div class="badge bg-success-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-check"></i>
+										</div> Lunch and Learns
+									</li>
+									<li class="clearfix mb-2">
+										<div class="badge bg-success-soft badge-ico-sm rounded-circle float-start">
+											<i class="fi fi-check"></i>
+										</div> Carpool/Bus/Train Incentive 
+									</li>
+
+								</ul>
+								<!-- /job -->
+
+							</div>
+						</div>
+
+						<a href="contact-1.html" class="btn btn-sm btn-primary btn-soft disabled">
+							<small class="d-block">0 available</small>
+							Contact Us Now
+						</a>
+
+
+					</div>
+				</div>
+
+
+
+			</div><!-- /end #middle -->
+
+
+
+
+			<!-- Footer -->
+			<footer id="footer" class="border-top">
+				<div class="container pt-6 pb-1">
+
+					<div class="row gutters-xl">
+						
+						<div class="col-12 col-lg-7 mb-5">
+
+							<div class="mb-4">
+								<img src="assets/images/logo/logo_dark.png" width="60" alt="...">
+							</div>
+
+							<p class="fst-italic text-indigo-900 col-xl-10">
+								ipsom loremn!
+							</p>
+
+							<p class="text-indigo-900">
+								&copy; Dinan.
+							</p>
+
+						</div>
+
+						<div class="col-12 col-lg-5">
+
+							<div class="row">
+
+								<div class="col-6">
+
+									<h4 class="h5">
+										Company
+									</h4>
+									<ul class="list-unstyled mb-5">
+
+										<li class="list-item mb-1">
+											<a href="about.html" class="js-ajax">About Us</a>
+										</li>
+
+										<li class="list-item mb-1">
+											<a href="careers.html" class="js-ajax">Careers</a>
+										</li>
+
+										<li class="list-item mb-1">
+											<a href="contact.html" class="js-ajax">Contact Us</a>
+										</li>
+
+									</ul>
+
+
+
+									<h4 class="h5">
+									Support
+									</h4>
+									<ul class="list-unstyled mb-5">
+
+										<li class="list-item mb-1">
+											<a href="help-center-1-index.html" target="_blank">Help Center</a>
+										</li>
+
+										<li class="list-item mb-1">
+											<a href="contact.html" target="_blank">Direct Contact</a>
+										</li>
+
+									</ul>
+
+								</div>
+
+								<div class="col-6">
+
+									<h4 class="h5">
+										Legal
+									</h4>
+									<ul class="list-unstyled mb-5">
+
+										<li class="list-item mb-1">
+											<a href="terms.html" class="js-ajax">Terms &amp; Conditions</a>
+										</li>
+
+										<li class="list-item mb-1">
+											<a href="privacy.html" class="js-ajax">Privacy</a>
+										</li>
+
+									</ul>
+
+
+
+									<h4 class="h5">
+										Social
+									</h4>
+									<ul class="list-unstyled mb-5">
+
+										<li class="list-item mb-1">
+											<a href="https://www.facebok.com" target="_blank" rel="noopener">Facebook</a>
+										</li>
+
+										<li class="list-item mb-1">
+											<a href="https://www.twitter.com" target="_blank" rel="noopener">Twitter</a>
+										</li>
+
+										<li class="list-item mb-1">
+											<a href="https://www.linkedin.com" target="_blank" rel="noopener">Linkedin</a>
+										</li>
+
+									</ul>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</footer>
+			<!-- /Footer -->
+
+
+
+
+
+			<!-- page preloader -->
+			<div id="page_preload" class="d-middle fixed-full z-index-9999 bg-white">
+
+				<span class="p-3 shadow-xs rounded">
+					<i class="fi fi-circle-spin fi-spin text-muted float-start"></i>
+					loading...
+				</span>
+
+			</div>
+			<!-- /page preloader -->
+
+
+
+		</div><!-- /#wrapper -->
+
+
+		<script src="assets/js/core.min.js"></script>
+
+
+		<!--
+
+			[SOW Ajax Navigation Plugin] [AJAX ONLY, IF USED]
+			If you have specific page js files, wrap them inside #page_js_files 
+			Ajax Navigation will use them for this page! 
+
+		-->
+		<div id="page_js_files"><!-- additional javascripts inside here --></div>
+
+		
+	</body>
+</html>
